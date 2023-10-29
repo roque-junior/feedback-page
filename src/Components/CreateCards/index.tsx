@@ -8,7 +8,8 @@ import {
   TitleCard,
   UlStyle,
   ListStyle,
-} from "./style";
+} from "./style" ;
+import StarRating from "./StarRating";
 
 interface Personprops {
   name: string;
@@ -32,6 +33,8 @@ export default function CreateCards(props: Personprops) {
             </ListStyle>
           ))}
         </UlStyle>
+        {/* Adicione o componente StarRating aqui com a prop totalStars definida como 5, por exemplo */}
+        <StarRating totalStars={5} />
         <IconContainer>
           <a href={props.githubLink} target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faGithub} />
@@ -48,3 +51,4 @@ export default function CreateCards(props: Personprops) {
     </>
   );
 }
+
